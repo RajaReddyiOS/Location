@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		18FC086620B1209600932FEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FC086520B1209600932FEC /* AppDelegate.swift */; };
-		18FC086820B1209600932FEC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FC086720B1209600932FEC /* ViewController.swift */; };
+		18FC086820B1209600932FEC /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FC086720B1209600932FEC /* MapViewController.swift */; };
 		18FC086B20B1209600932FEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18FC086920B1209600932FEC /* Main.storyboard */; };
 		18FC086D20B1209700932FEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18FC086C20B1209700932FEC /* Assets.xcassets */; };
 		18FC087020B1209700932FEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18FC086E20B1209700932FEC /* LaunchScreen.storyboard */; };
 		18FC087B20B1209700932FEC /* LocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FC087A20B1209700932FEC /* LocationTests.swift */; };
 		18FC088620B1209700932FEC /* LocationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FC088520B1209700932FEC /* LocationUITests.swift */; };
+		18FC089720B124F100932FEC /* LocationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FC089620B124F100932FEC /* LocationHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,7 @@
 /* Begin PBXFileReference section */
 		18FC086220B1209500932FEC /* Location.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Location.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18FC086520B1209600932FEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		18FC086720B1209600932FEC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		18FC086720B1209600932FEC /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		18FC086A20B1209600932FEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		18FC086C20B1209700932FEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18FC086F20B1209700932FEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +48,7 @@
 		18FC088120B1209700932FEC /* LocationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LocationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18FC088520B1209700932FEC /* LocationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationUITests.swift; sourceTree = "<group>"; };
 		18FC088720B1209700932FEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18FC089620B124F100932FEC /* LocationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +99,9 @@
 		18FC086420B1209500932FEC /* Location */ = {
 			isa = PBXGroup;
 			children = (
-				18FC086520B1209600932FEC /* AppDelegate.swift */,
-				18FC086720B1209600932FEC /* ViewController.swift */,
-				18FC086920B1209600932FEC /* Main.storyboard */,
+				18FC089520B124D400932FEC /* LocationHelper */,
+				18FC089320B124B100932FEC /* Controllers */,
+				18FC089420B124BC00932FEC /* Scenes */,
 				18FC086C20B1209700932FEC /* Assets.xcassets */,
 				18FC086E20B1209700932FEC /* LaunchScreen.storyboard */,
 				18FC087120B1209700932FEC /* Info.plist */,
@@ -123,6 +125,31 @@
 				18FC088720B1209700932FEC /* Info.plist */,
 			);
 			path = LocationUITests;
+			sourceTree = "<group>";
+		};
+		18FC089320B124B100932FEC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				18FC086520B1209600932FEC /* AppDelegate.swift */,
+				18FC086720B1209600932FEC /* MapViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		18FC089420B124BC00932FEC /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				18FC086920B1209600932FEC /* Main.storyboard */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		18FC089520B124D400932FEC /* LocationHelper */ = {
+			isa = PBXGroup;
+			children = (
+				18FC089620B124F100932FEC /* LocationHelper.swift */,
+			);
+			path = LocationHelper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,7 +283,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18FC086820B1209600932FEC /* ViewController.swift in Sources */,
+				18FC089720B124F100932FEC /* LocationHelper.swift in Sources */,
+				18FC086820B1209600932FEC /* MapViewController.swift in Sources */,
 				18FC086620B1209600932FEC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,7 +459,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7Z847JSHNU;
 				INFOPLIST_FILE = Location/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -448,7 +478,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7Z847JSHNU;
 				INFOPLIST_FILE = Location/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
